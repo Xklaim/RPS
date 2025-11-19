@@ -1,8 +1,16 @@
 function playRound(humanChoice, computerChoice) {
-    console.log(computerChoice);
-    console.log(humanChoice);
-
-    alert(`You chose ${humanChoice} and I chose ${computerChoice}`);
+   if(computerChoice === humanChoice){
+    alert(`i chose ${computerChoice} too.. Ahh.. Drawn`);
+   }else if(
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "paper" && computerChoice === "rock") ||
+    (humanChoice === "scissors" && computerChoice === "paper") 
+    ){
+    alert(`Oh you have beaten me.. i chose ${computerChoice}`);
+    }else{
+        alert(`Ah-ha! i won with ${computerChoice}`)
+    }
+    
 }
 
 const humanSelection = getHumanChoice();
