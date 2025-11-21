@@ -36,3 +36,4 @@ buttons.forEach(btn => {
     playRound(humanSelection, computerSelection);
   });
 });
+
