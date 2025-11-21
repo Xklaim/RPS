@@ -3,16 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
 
 
+    <div class="heading" id="heading"> <h1>Rock, Paper or Scissors</h1>
+    <h3>Your Choice..</h3>
+    </div>
+   
+
+<div class="choices" id="choices">
+      <button class="rock" id="rock">
+        <img src="icons/rock.svg" alt="rock">
+    </button>
+
+    <button class="paper" id="paper">
+        <img src="icons/paper.svg" alt="paper">
+    </button>
+
+    <button class="scissors" id="scissors">
+        <img src="icons/scissors.svg" alt="scissors">
+    </button>
+</div>
+  
+
+<div class="msg" id="msg">
+    <p id="whoWon">Hi there.. Go on choose something.. anyyything..</p>
+</div>
 
 
 
 
-    <script src="script.js"></Script>
+
+<div class="score" id="score">
+<table border="0">
+  <tr>
+    <th>Player</th>
+    <th>Score</th>
+  </tr>
+  <tr>
+    <td>You</td>
+    <td id="humanScore">0</td>
+  </tr>
+  <tr>
+    <td>Computer</td>
+    <td id="computerScore">0</td>
+  </tr>
+</table>
+
+</div>
+
+
+
+    <!-- <script src="script.js"></Script> -->
+        <script src="scriptUI.js"></script>
     
 </body>
 </html>

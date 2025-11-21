@@ -1,0 +1,105 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    color: rgb(165, 95, 9);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 10rem;
+    height: 10rem;
+    background: transparent;
+    border: none;
+    margin: 2rem;
+}
+
+button:hover, img:hover{
+    translate: 0 -0.5rem;
+    cursor: pointer;
+    
+
+
+}
+
+button:hover img {
+  filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.85));
+  transform: scale(1.05);
+}
+
+button img{
+    width: 10rem;
+    height: 10rem;
+    transition: filter 0.2s ease, transform 0.2s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.55));
+}
+
+/* .scissors{
+    rotate: 245deg;
+} */
+
+
+
+#whoWon{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem;
+    color: rgb(165, 95, 9);
+}
+
+
+
+/* score table css */
+table {
+  border-collapse: collapse;
+  width: 18rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px;
+  border: 2px solid #444;
+}
+
+th {
+  background-color: rgb(165, 95, 9);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+#humanScore, #computerScore {
+  font-weight: bold;
+  font-size: 18px;
+}
