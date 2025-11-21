@@ -29,7 +29,7 @@ function getComputerChoice() {
     //     return choices[2];
     // }
 
-    //the commented was my old way to achieve the same thing which the next single line does..
+    //the commented was my old way to achieve the same thing which the next single line does, DAMN..
     return choices[Math.floor(Math.random() * 3)]
 }
 
