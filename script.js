@@ -13,20 +13,22 @@ function playRound(humanChoice, computerChoice) {
     
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+
 
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"]
-    let rndNum = Math.floor(Math.random() * 10)
+    // let rndNum = Math.floor(Math.random() * 10)
 
-    if (rndNum <= 3){
-        return choices[0];
-    }else if(rndNum > 3 && rndNum <= 6){
-        return choices[1];
-    }else{
-        return choices[2];
-    }
+    // if (rndNum <= 3){
+    //     return choices[0];
+    // }else if(rndNum > 3 && rndNum <= 6){
+    //     return choices[1];
+    // }else{
+    //     return choices[2];
+    // }
+
+    //the commented was my old way to achieve the same thing which the next single line does..
+    return choices[Math.floor(Math.random() * 3)]
 }
 
 function getHumanChoice(){
@@ -45,4 +47,9 @@ function getHumanChoice(){
     }
 }
 
+
+for(let i = 0; i<5; i++){
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
+}
