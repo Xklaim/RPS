@@ -1,14 +1,16 @@
 function playRound(humanChoice, computerChoice) {
    if(computerChoice === humanChoice){
-    alert(`i chose ${computerChoice} too.. Ahh.. Drawn`);
+    alert(`i chose ${computerChoice} too.. Ahh.. Drawn, Your score : ${humanScore}, My score : ${computerScore}`);
    }else if(
     (humanChoice === "rock" && computerChoice === "scissors") ||
     (humanChoice === "paper" && computerChoice === "rock") ||
     (humanChoice === "scissors" && computerChoice === "paper") 
     ){
-    alert(`Oh you have beaten me.. i chose ${computerChoice}`);
+        humanScore++
+    alert(`Oh you have beaten me.. i chose ${computerChoice}, Your score : ${humanScore}, My score : ${computerScore}`);
     }else{
-        alert(`Ah-ha! i won with ${computerChoice}`)
+        computerScore++
+        alert(`Ah-ha! i won with ${computerChoice}, Your score : ${humanScore}, My score : ${computerScore}`)
     }
     
 }
@@ -47,9 +49,19 @@ function getHumanChoice(){
     }
 }
 
+let computerScore = 0;
+let humanScore = 0;
 
 for(let i = 0; i<5; i++){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
+}
+
+if (humanScore > computerScore) {
+  alert(`You win the match! Final Score - You: ${humanScore}, Me: ${computerScore}`);
+} else if (computerScore > humanScore) {
+  alert(`I win the match! Final Score - You: ${humanScore}, Me: ${computerScore}`);
+} else {
+  alert(`The match is a draw! Final Score - You: ${humanScore}, Me: ${computerScore}`);
 }
